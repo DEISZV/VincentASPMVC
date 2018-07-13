@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class=" container navbar-light">
+        <div class="row">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <ul>
+                    <li> <a href="@Url.RouteUrl("Default")" class=" col-2">Accueil</a></li>
+                    <li> <a href="@Url.RouteUrl("AboutRoute")" class="col-2">A propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+        <div class="container">
+
+       
+
+        <h1>Accueil</h1>
+        <p>
+            <a href="~/a-propos">A propos</a>
+            <br />
+            @Html.ActionLink("A propos", "About", "Home")
+            <br />
+            <a href="@Url.Action("About", "Home")">A propos</a>
+            <br />
+            <a href="@Url.RouteUrl("AboutRoute")">A propos</a>
+        </p>
+
+    </div>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
